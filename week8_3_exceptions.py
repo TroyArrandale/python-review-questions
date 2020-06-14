@@ -13,13 +13,12 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             broken_function()
 
-        self.assertTrue('This is broken' in context.exception)
     
     #TODO: Types of exceptions given test_function('2',1) what type of exception is expected to be thrown? Fix the test below to check for the specific type?
     def test_add_function(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(TypeError) as context:
             add_function('1',2)
-    #TODO explain why Exception is assertRaises?
+    #TODO explain Exception and Type error relationship assertRaises?
 
 if __name__ == '__main__':
     unittest.main()
